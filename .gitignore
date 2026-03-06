@@ -6,3 +6,6 @@ node_modules/
 data/texts/
 data/pdfs/
 data/images/
+
+.vercel
+.env*.local
