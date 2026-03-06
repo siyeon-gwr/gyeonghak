@@ -1,9 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@vercel/next" }
-  ],
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic_api_key"
-  }
+  "version": 2
 }
