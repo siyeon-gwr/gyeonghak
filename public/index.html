@@ -561,9 +561,17 @@ function renderChapterList() {
 }
 
 // ─── NAVIGATE ─────────────────────────────────────────────────
-function navigate(view, params = {}) {
+async function navigate(view, params = {}) {
   state.view = view;
   Object.assign(state, params);
+  if (view === 'home') {
+    state.currentClassic = null;
+    state.currentChapter = null;
+    state.currentBook = null;
+    renderSidebar();
+    const stats = await api('/stats');
+    renderHome(stats);
+  }
 }
 
 // ─── HOME ─────────────────────────────────────────────────────
